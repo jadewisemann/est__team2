@@ -308,9 +308,9 @@ img {
 }
 
 @media all and (min-width: 801px) and (max-width:1300px) {
-    html {
+    /* html {
         font-size: 52.5%;
-      }
+      } */
     .section-container {
         width: 90rem;
         max-width: 90rem;
