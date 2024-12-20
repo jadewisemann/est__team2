@@ -68,7 +68,7 @@ body {
 
 /* Section Styles */
 section {
-  padding: 60px 20px;
+  padding: 6rem 2rem;
   text-align: center;
 }
 
@@ -81,7 +81,7 @@ section {
   color: var(--background);
   font-size: 2rem;
   font-weight: 900;
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
   letter-spacing: -0.3px;
   animation: slideUp 1s ease-in-out;
 }
@@ -90,7 +90,7 @@ section {
   color: var(--fontWhite);
   font-size: 6rem;
   font-weight: 900;
-  margin-bottom: 11px;
+  margin-bottom: 1.1rem;
 }
 
 .section-description {
@@ -98,7 +98,7 @@ section {
   font-size: 1.7rem;
   font-weight: 300;
   color: var(--fontWhite);
-  margin: 0 auto 80px;
+  margin: 0 auto 8rem;
   width: 50%;
   line-height: 1.7;
 }
@@ -106,20 +106,20 @@ section {
 /* Pricing Cards */
 .pricing-cards {
   display: flex;
-  gap: 40px;
+  gap: 4rem;
   width: 100%;
   justify-content: center;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   color: var(--fontBlack);
   background-color: var(--bgWhite);
-  padding: 70px 30px 60px 30px;
-  /* border: 1px solid #444; */
-  width: 300px;
+  padding: 7rem 3rem 6rem 3rem;
+  width: 30rem;
   position: relative;
   text-align: left;
-  /* border-radius: 8px; */
   transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
 
@@ -134,8 +134,8 @@ section {
 }
 
 .card h3 {
-  font-size: 23px;
-  margin-bottom: 30px;
+  font-size: 2.3rem;
+  margin-bottom: 3rem;
   font-weight: 900;
 }
 
@@ -144,14 +144,14 @@ section {
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--fontBlack);
-  margin: 0 0 20px;
+  margin: 0 0 2rem;
   line-height: 1.3;
 }
 
 .card-price {
-  font-size: 23px;
+  font-size: 2.3rem;
   color: var(--fontBlack);
-  margin-bottom: 25px;
+  margin-bottom: 2.5rem;
   font-weight: 900;
   letter-spacing: 0px;
 
@@ -159,14 +159,13 @@ section {
 
 .card-btn {
   display: inline-block;
-  padding: 10px 30px;
-  /* background: var(--bgBlack); */
-  color: var(--fontBlack)
+  padding: 1rem 3rem;
+  color: var(--fontBlack);
   text-decoration: none;
   font-weight: bold;
   border: 1.5px solid #000;
-  /* border-radius: 5px; */
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  text-align: center;
 }
 
 .card-btn:hover {
@@ -178,37 +177,41 @@ section {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 12px;
+  font-size: 1.2rem;
   background: #000;
   color:var(--pointColor);
-  padding: 5px 16px;
-  border-radius: 30px;
+  padding: .5rem 1.6rem;
+  border-radius: 3rem;
 }
 
 /* About Section */
 .about {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 4rem;
   justify-content: center;
 }
 
 .about-content {
-  max-width: 50%;
+  /* max-width: 50%; */
   text-align: left;
-  font-size: 20px;
+  font-size: 2rem;
+  flex: 1;
 }
 
 .about-content h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
 }
 
 .about-image {
-  flex: 0 0 300px; /* Reduce photo size */
+  flex: 1;
 }
-
-.image-frame {
+img {
+  width: 100%;
+  object-fit: cover;
+}
+/* .image-frame {
   background-color: var(--pointColor);
   padding: 10px;
   display: inline-block;
@@ -216,24 +219,31 @@ section {
 
 .image-frame img {
   width: 100%;
-}
+  width: 100%;
+    object-fit: cover;
+    height: 100%;
+} */
 
 /* Why Choose Us Section */
 .why-choose {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 4rem;
   justify-content: center;
 }
-
+.why-image {
+  flex: 1;
+}
 .why-content {
-  max-width: 50%;
+  /* max-width: 50%; */
+  flex: 1;
   text-align: left;
+  /* flex-shrink: 0; */
 }
 
 .why-content h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
 }
 
 /* Contact Form */
@@ -252,6 +262,9 @@ section {
   font-size: 16px;
   border: none;
   border-radius: 5px;
+}
+.contact-form button {
+  border-radius: 25px;
 }
 
 .contact-form input,
@@ -305,7 +318,6 @@ section {
     }
 }
 
-@media all and (max-width: 800px) {}
 
 @media all and (min-width: 801px) and (max-width:1300px) {} 
 
@@ -314,4 +326,57 @@ section {
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+@media all and (max-width: 800px) {
+  .hero-content h1{
+    font-size: 6rem;
+  }
+  .card h3 {
+    margin-bottom: 1rem;
+  }
+  .v-line {
+    height: 5rem;
+ }
+  .why-choose,
+  .about {
+    flex-direction: column;
+  }
+  .about {
+    gap: 3rem;
+  }
+  section {
+    padding: 2rem;
+  }
+  .section-title {
+    line-height: 5.9rem;
+  }
+  .pricing-cards {
+    flex-direction: column;
+  }
+  .card{
+    width: 100%;
+    padding: 4rem;
+  }
+  .pricing-cards {
+    gap: 2rem;
+  }
+  .section-description{
+    margin: 0 auto 4rem;
+  }
+  .why-choose p,
+  .about p {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  .why-content h2,
+  .about-content h2 {
+    line-height: 4.1rem;
+  }
+  .section-title {
+    margin-bottom: 4rem;
+  }
+  footer {
+    padding-top: 7.1rem;
+}
 }
