@@ -162,7 +162,11 @@ header > .utility .btn {
   background-color: transparent;
   border: none;
 }
-
+@media all and (min-width: 800px) {
+header > .utility .btn {
+  display: none;
+}
+}
 header > .utility > #hamburger {
   display: none;
 }
